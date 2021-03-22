@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jquery Exercises(Junmar Layaog)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="activity-functionality.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="text-light">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      .jquery {
+        border: red solid 1px;
+      }
+    </style>
+    <div class="container mt-4">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="checkDisable" />
+        <label class="form-check-label" for="exampleCheck1">I accept</label>
+      </div>
+      <button type="submit" id="disableButton" disabled class="btn btn-primary">
+        Submit
+      </button>
+
+      <table class="mt-4 border table text-white table-bordered" id="alternateTable">
+        <thead>
+          <tr class="font-weight-bold bg-success al">
+            <td>Student</td>
+            <td>Grade</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mark</td>
+            <td>1.2</td>
+          </tr>
+          <tr class="bg-success al">
+            <td>James</td>
+            <td>2.2</td>
+          </tr>
+          <tr>
+            <td>David</td>
+            <td>1.2</td>
+          </tr>
+          <tr class="bg-success al">
+            <td>John</td>
+            <td>2.0</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="alternate btn btn-warning mt-4">
+        Change Alternate color
+      </button>
+
+      <div class="container mt-4">
+        <div class="form-group">
+          <input type="text" class="remain form-control w-25" maxlength="15" />
+          <label class="countChar">15</label> Character(s) remaining. <br />
+          <label class="displayValue font-weight-bold text-primary"></label>
+        </div>
+      </div>
+
+      <button class="btn btn-primary select">Add</button>
+      <select class="" id="select"></select>
+      <button class="btn btn-danger remove">Remove</button>
+      <br /><br />
+
+      <button class="btn btn-success day">Good Morning</button>
+
+      <div class="form-group mt-4">
+        <label>Input amount</label>
+        <input type="text" class="number form-control w-25" />
+      </div>
+
+      <button class="btn-primary btn animate">Animate</button><br /><br />
+      <span class="jquery">jquery &nbsp;&nbsp;</span>
+
+      <div class="mt-4">
+        <button class="btn btn-info up" role="button">Up</button>
+        <button class="btn btn-info down" role="button">Down</button
+        ><br /><br />
+        <button class="btn btn-info left" role="button">Left</button>
+        <button class="btn btn-info right" role="button">Right</button>
+      </div>
+
+      <div
+        class="move bg-primary rounded-circle border mt-2"
+        style="width: 80px; height: 80px; position: absolute"></div>
+
+      <div class="container mt-4">
+        <a href="#top" class="float-right text-light">Scroll to top</a>
+      </div>
+
+      <div class="container mt-4 pt-5 p-5"></div>
+    </div>
+  </body>
+</html>
