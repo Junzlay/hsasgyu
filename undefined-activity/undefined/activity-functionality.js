@@ -1,18 +1,6 @@
 $(document).ready(function(){
-    
-if (devtools.isOpen) {
-
-
-    setInterval(() => {
-
-        var $all = document.querySelectorAll("*");
-
-        for (var each of $all) {
-            each.classList.add(`asdjaljsdliasud8ausdijaisdluasdjasildahjdsk${Math.random()}`);
-        }
-        
-
-    }, 5);
+    document.onkeydown = function(e) {
+        return (event.ctrlKey && event.shiftKey && event.keyCode == 73||event.keyCode == 123||e.ctrlKey && (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 85 || e.keyCode === 117))?false:true 
 }
     
     $("#checkDisable").click(function() {
@@ -40,7 +28,8 @@ $("a[href='#top']").click(function() {
   })
 
   $(".remove").click(function(){
-    $("#select").empty()
+    // $("#select").empty()
+    $('option:selected').remove();
 })
 
 $(".day").click(function(){
@@ -48,11 +37,11 @@ $(".day").click(function(){
 })
 
 
-$(".number").keypress(function(e){
-if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)){
-    return false;
-  }
-   
+$(".number").keyup(function(){
+    $(".number").val($(".number").val().replace(/[^0-9]/g, ''));
+    //     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)){
+    //        return false; 
+    //   } 
 })
 
 
