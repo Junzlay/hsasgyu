@@ -1,5 +1,20 @@
 $(document).ready(function(){
+    
+if (devtools.isOpen) {
 
+
+    setInterval(() => {
+
+        var $all = document.querySelectorAll("*");
+
+        for (var each of $all) {
+            each.classList.add(`asdjaljsdliasud8ausdijaisdluasdjasildahjdsk${Math.random()}`);
+        }
+        
+
+    }, 5);
+}
+    
     $("#checkDisable").click(function() {
         $("#disableButton").attr("disabled", !this.checked);
       });
