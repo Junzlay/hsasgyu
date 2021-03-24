@@ -8,14 +8,12 @@ $(document).ready(function(){
       });
 
 $(".alternate").click(function(){
-    $(".al").addClass("bg-warning")
-    $(".al").addClass("text-dark")
+    $(".al").addClass("bg-warning text-dark").removeClass("bg-success")
 })
 
 
 $("a[href='#top']").click(function() {
     $(window).scrollTop(0);
-    // $("html, body").animate({ scrollTop: 0 }, "slow"); //Also Working
   }); 
 
   $(".remain").keyup(function(){
@@ -24,12 +22,11 @@ $("a[href='#top']").click(function() {
   })
  
   $(".select").click(function(){
-      $("#select").append("<option>"+$(".remain").val()+"</option>")
+      $("#select").append("<option value='"+$(".remain").val()+"'>"+$(".remain").val()+"</option>")
   })
 
   $(".remove").click(function(){
-    // $("#select").empty()
-    $('option:selected').remove();
+    $('#select option[value="'+ $('#select').val() + '"]').remove() 
 })
 
 $(".day").click(function(){
